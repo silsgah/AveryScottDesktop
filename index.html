@@ -5,13 +5,15 @@
     
     <link href="styles/kendo.mobile.all.min.css" rel="stylesheet" />
     <link href="styles/main.min.css" rel="stylesheet" />
-  
+     <script src="js/cordova.js"></script>
+    <script src="js/cordova-plugins.js"></script>
     <script src="js/jquery.min.js"></script>
     <script src="js/angular.min.js"></script>
     <script src="js/kendo.all.min.js"></script>
+     
      <script src="js/app.js"></script>
     <script src="js/SocialSharing.js"></script>
-    <script src="cordova.js"></script>
+   
    <script src="http://maps.googleapis.com/maps/api/js?sensor=true"></script>
 </head>
 <body>
@@ -21,10 +23,10 @@
 			 <h1 class="app-logo hide-text center-block">Avery Scott<small>  Office Rental Services Ghana</small></h1>
             
             <ul data-role="actionsheet" id="sharemedia" data-popup='{"direction": "left"}'>
-                
-                <li><a data-role="button" onclick="window.plugins.socialsharing.shareViaFacebook('Message via Facebook', null, null, function() {console.log('share ok')}, function(errormsg){alert(errormsg)})" data-action="reply">Facebook1</a></li>
-				<li><a data-role="button" onclick="window.plugins.socialsharing.shareViaTwitter('Message via Twitter')" href="#tabstrip-mainstart" data-action="reply">Twitter</a></li>
-                <li><a data-role="button" onclick="window.plugins.socialsharing.share('Message and subject', 'The subject')" href="#" data-action="reply">Email</a></li>
+                 <li><a data-click="sharefacebook" class="addNew" type="button" href="#" data-role="button">Share Via Facebook</a>  </li>
+                <li><a data-role="button" onclick="window.plugins.socialsharing.shareViaFacebook('Message via Facebook', null, null, function() {console.log('share ok')}, function(errormsg){alert(errormsg)})">Facebook</a></li>
+				<li><a data-role="button" onclick="window.plugins.socialsharing.shareViaTwitter('Message via Twitter')" >Twitter</a></li>
+                <li><a data-role="button" onclick="window.plugins.socialsharing.share('Message and subject', 'The subject')" >Email</a></li>
             </ul>
            
 			</div>

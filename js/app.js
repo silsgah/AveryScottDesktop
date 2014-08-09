@@ -1,14 +1,8 @@
 ﻿window.kendoMobileApplication = new kendo.mobile.Application(document.body, { transition: "slide", layout: "tabstrip-layout", skin: "flat" });
 var onDeviceReady = function () {
-    window.plugins.socialsharing.share("message", "subject");
-    window.plugin.email.isServiceAvailable(
-    function (isAvailable) {
-       // alert('Service is not available');
-    }
-);
-    // Handle "backbutton" event
-    document.addEventListener('backbutton', onBackKeyDown, false);
-    navigator.splashscreen.hide();
+    //window.plugins.socialsharing.share("message", "subject");
+  
+   
 };
 document.addEventListener('deviceready', onDeviceReady, false);
 
@@ -19,7 +13,10 @@ function closeModalViewAdd() {
 function reply() {
     window.location.href = '#tabstrip-mainstart';
 }
+function sharefacebook() {
+    window.plugins.socialsharing.shareViaFacebook('Message via Facebook', null, null, function () { console.log('share ok') }, function (errormsg) { alert(errormsg) })
 
+}
 function showMap() {
     navigator.geolocation.getCurrentPosition(onSuccessShowMap,onErrorShowMap);
 }
