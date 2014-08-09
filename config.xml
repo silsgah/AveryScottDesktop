@@ -1,0 +1,23 @@
+
+<?xml version="1.0" encoding="UTF-8" ?>
+    <widget xmlns   = "http://www.w3.org/ns/widgets"
+        xmlns:gap   = "http://phonegap.com/ns/1.0"
+        id          = "com.phonegap.example"
+        version     = "3.1.0" >
+
+    <!-- versionCode is optional and Android only -->
+
+    <name>RecycleApp</name>
+
+    <description>
+        Recycling in your community
+    </description>
+
+    <author href="https://build.phonegap.com" email="info@simodigital.net">
+        Gah
+    </author>
+<icon src="styles/ldpi.png" gap:platform="android" gap:density="ldpi" />
+<icon src="styles/mdpi.png" gap:platform="android" gap:density="mdpi" />
+<icon src="styles/hdpi.png" gap:platform="android" gap:density="hdpi" />
+<icon src="styles/xhdpi.png" gap:platform="android" gap:density="xhdpi" />
+</widget>
